@@ -14,10 +14,7 @@ export default function Header() {
                 <IoSearchOutline className='searchIcon' />
                 <input type='text' className='searchInput' />
            </div>
-           <div><BsThreeDots className='dots'/></div>
-                 
-            
-          
+           <div><BsThreeDots className='dots'/></div>       
         
         </div>)
 }

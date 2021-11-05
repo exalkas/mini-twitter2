@@ -1,24 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
-  justify-content: space-evenly;
   margin-top: 20px;
 }
 
 .leftArrow {
   color: rgb(29, 155, 240);
+
+  position: relative;
+  left: 277px;
+  height: 25px;
+  width: 20px;
+  top: 7px;
 }
 
 .searchIcon {
   margin-left: 64px;
   position: relative;
-  left: 23px;
+  left: 239px;
   margin-top: 10;
   top: 3px;
 }
 
 .searchInput {
   background-color: #c6e6f1;
+
+  height: 27px;
+  width: 364px;
+  border-width: 0;
+  border-radius: 14px;
 }
 
 .dots {
+  color: rgb(29, 155, 240);
+  position: relative;
+  left: 24px;
+  height: 25px;
+  width: 20px;
+  top: 7px;
+}
+
+/* Right Bar*/
+
+.filter {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 351px;
+  border-radius: 4%;
+  height: 284px;
+}
+
+input {
+  margin-left: 211px;
+}
+
+div.follow {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 351px;
+  border-radius: 4%;
+  height: 284px;
+  background-color: #cad3db;
+  margin-top: 10px;
 }
