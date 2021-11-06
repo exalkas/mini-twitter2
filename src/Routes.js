@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from 'react-router-dom';
 import Header from './header';
 
-import Sidebar from './Sidebar';
+    
 
 import Home from './LeftBar/Home';
 import Explore  from './LeftBar/Explore';
