@@ -1,0 +1,33 @@
+.sidebarRow{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #00acee;
+    width:200px;
+    font-size: 20px;
+ 
+}
+
+.sidebarRow:hover{
+    
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.sidebarRow > h4{
+    margin-left: 20px;
+    font-weight: 600;
+  
+}
+
+.sidebar > button{
+    background-color: #00acee;
+    width: 200px;
+    height: 50px;
+    border-radius: 4rem;
+    border-style: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+}
