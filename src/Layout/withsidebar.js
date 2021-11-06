@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
-import { Route, Switch } from 'react-router-dom';
+
 import Header from '../header';
+
 
 //import Sidebar from '../LeftBar/Sidebar';
 import Sidebar from '../LeftBar/Sidebar'
@@ -42,6 +43,7 @@ function PageLayout() {
         </div>   
         <div> 
             <div className='MessageMainPage'>
+           
                   <MessageSender />
             </div>
             <div className='MessageMainPage'>
