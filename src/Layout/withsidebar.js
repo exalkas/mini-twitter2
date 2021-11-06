@@ -22,7 +22,7 @@ import MessageSender from '../Middle/Message';
 
 import RightBar from '../RightBar/rightBar'
 
-function PageLayout() {
+function PageLayout(props) {
   return (
 
     <div className="App" style={{ display: 'flex' }} >
@@ -43,8 +43,8 @@ function PageLayout() {
         </div>   
         <div> 
             <div className='MessageMainPage'>
-           
-                  <MessageSender />
+            {props.children}
+                  {/* <MessageSender /> */}
             </div>
             <div className='MessageMainPage'>
             </div>

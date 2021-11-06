@@ -11,6 +11,7 @@ import MessagesRoute from './LeftBar/MessageRoute';
 import Bookmarks from './LeftBar/Bookmarks';
 import List from './LeftBar/Lists';
 import Profile from './LeftBar/Profile';
+import loginRegister from "./Login"
 
 import MessageSender from './Middle/Message';
 
@@ -22,13 +23,14 @@ import RightBar from './RightBar/rightBar'
 export default function Routes(){
     return(
         <Switch>
+            <Route exact path="/login"  ><Route component={loginRegister} /></Route>
                 <Route exact path="/Home"  ><PageLayout><Route component={Home} /></PageLayout></Route>
                 <Route  exact path="/Explore" ><PageLayout><Route component={Explore}/></PageLayout></Route>
-                <Route  exact path="/Notifications" component={Notifications}/>
-                <Route  exact path="/Messages" component={MessagesRoute}/>
-                <Route  exact path="/Bookmarks" component= {Bookmarks} />
-                <Route  exact path="/List" component={List} />
-                <Route  exact path="/Profile" component={Profile} />       
+                <Route  exact path="/Notifications" ><PageLayout><Route component={Notifications}/></PageLayout></Route>
+                <Route  exact path="/Messages" ><PageLayout><Route  component={MessagesRoute}/></PageLayout></Route>
+                <Route  exact path="/Bookmarks" ><PageLayout><Route  component= {Bookmarks} /></PageLayout></Route>
+                <Route  exact path="/List" ><PageLayout><Route  component={List} /></PageLayout></Route>
+                <Route  exact path="/Profile" ><PageLayout><Route  component={Profile} />       </PageLayout></Route>
             </Switch>
     )
 }
