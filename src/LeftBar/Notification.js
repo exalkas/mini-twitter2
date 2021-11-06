@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from '../Middle/Post';
+import Post from '../Middle/Post1';
 
 function Notification() {
     return (

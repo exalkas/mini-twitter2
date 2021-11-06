@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './header';
 import PageLayout from "./Layout/withsidebar";
 
@@ -31,6 +31,7 @@ export default function Routes(){
                 <Route  exact path="/Bookmarks" ><PageLayout><Route  component= {Bookmarks} /></PageLayout></Route>
                 <Route  exact path="/List" ><PageLayout><Route  component={List} /></PageLayout></Route>
                 <Route  exact path="/Profile" ><PageLayout><Route  component={Profile} />       </PageLayout></Route>
+                <Redirect from='/' to='/Home'/>
             </Switch>
     )
 }

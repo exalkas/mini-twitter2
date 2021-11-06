@@ -39,7 +39,7 @@ function Post(props) {
            <div className='postTop'>
                
                <div className='postTopInfo'>
-               <img src={`${props.item.image_url}`} alt=''/>
+               {Userfoto(props.item.user_id)}
                    <h3>{props.item.username}</h3>
                     <p>{props.item.timestamp}</p>
                </div>
@@ -49,6 +49,7 @@ function Post(props) {
                </div>
                <div className='postImage'>
                   
+               <img src={`${props.item.image_url}`} alt=''/>
                </div>
                <div className='postOptions'>
                <div className='postOption'>

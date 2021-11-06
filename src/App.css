@@ -29,8 +29,10 @@
 
 .searchInput {
   background-color: #c6e6f1;
+  text-align: center;
 
-  height: 27px;
+
+  height: 30px;
   width: 364px;
   border-width: 0;
   border-radius: 14px;
@@ -121,7 +123,6 @@ div.sidebar button {
 
 .MessageMainPage {
   width: 900px;
-  background-color: aquamarine;
 }
 
 .messageSender {
@@ -193,10 +194,13 @@ div.sidebar button {
   position: relative;
   align-items: center;
   padding: 15px;
+  
 }
 
 .postTopInfo > h3 {
   font-size: large;
+  display: flex;
+  align-items: center;
 }
 
 .postTopInfo > p {
@@ -233,4 +237,33 @@ div.sidebar button {
 .postOption:hover {
   background-color: #eff2f5;
   border-radius: 10px;
+}
+
+.postTopInfo{
+  display: flex;
+
+}
+
+.postTopInfo img{
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 1.25em;
+  margin-right: 10px
+
+}
+
+.post p{
+  font-size: 1.35em;
+  margin-bottom: 20px;
+
+}
+
+.postImage img{
+width: 80%;
+border-radius: 15px;
+}
+
+.postOption p {
+  font-size: 0.8em ;
+  margin-top: 20px; 
 }
