@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* -------------- Header Start------------------*/
+.header {
   display: flex;
+  margin-top: 10px;
+}
+
+.leftArrow {
+  color: rgb(29, 155, 240);
+
+  position: relative;
+  left: 277px;
+  height: 25px;
+  width: 20px;
+  top: 7px;
+}
+
+.searchIcon {
+  margin-left: 64px;
+  position: relative;
+  left: 239px;
+  margin-top: 10;
+  top: 3px;
+}
+
+.searchInput {
+  background-color: #c6e6f1;
+
+  height: 27px;
+  width: 364px;
+  border-width: 0;
+  border-radius: 14px;
+}
+
+.dots {
+  color: rgb(29, 155, 240);
+  position: relative;
+  left: 24px;
+  height: 25px;
+  width: 20px;
+  top: 7px;
+}
+
+/* ---------------------------------- Right Side Bar Start -----------------*/
+
+.filter {
+  border-width: 1px;
+  border-color: #ddcdcd;
+  border-style: solid;
+  width: 330px;
+  border-radius: 4%;
+  height: 284px;
+  margin-top: 10px;
+}
+
+input {
+  margin-left: 200px;
+}
+
+.trends {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 4%;
+  background-color: rgb(239, 242, 245);
+  height: 32px;
+  width: 328px;
+}
+
+div.follow {
+  border-width: 1px;
+  border-color: #ddcdcd;
+  border-style: solid;
+  width: 330px;
+  border-radius: 4%;
+  height: 284px;
+  background-color: #eff2f5;
+  margin-top: 10px;
+}
+
+/*------------------------- Left Side Bar Start ------------------*/
+
+div.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #00acee;
+  width: 200px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.sidebarRow:hover {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.sidebarRow h4 {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+div.sidebar button {
+  background-color: #00acee;
+  width: 171px;
+  height: 44px;
+  border-radius: 4rem;
+  border-style: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 12 px;
+}
+
+/* ------------------- Middle Part Start----------------*/
+
+.MessageMainPage {
+  width: 900px;
+  background-color: aquamarine;
+}
+
+.messageSender {
+  display: flex;
+  margin-top: 10px;
   flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  width: 866px;
+
+  font-size: 30px;
+  background-color: aquamarine;
+}
+.messageSenderTop {
+  display: flex;
+  border-bottom: 1px solid #eff2f5;
+  padding: 15px;
+}
+
+.messageSenderTop > form {
+  flex: 1;
+  display: flex;
+}
+
+.messageSenderTop > form > input {
+  outline-width: 0;
+  border: none;
+  padding: 5px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  background-color: #eff2f5;
+}
+
+.messageSenderInput {
+  flex: 1;
+  height: 100px;
+}
+
+.messageSenderBottom {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.messageSenderBottom > button {
+  border-radius: 3rem;
+  width: 150px;
+  height: 35px;
+  background-color: #00acee;
+  border-style: none;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* -------------- Middle Part Post Component Start ---------------------*/
+
+.post {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 5px 7px -7px rgba(0, 0, 0, 0.75);
+}
+
+.postTop {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 15px;
+}
+
+.postTopInfo > h3 {
+  font-size: large;
+}
+
+.postTopInfo > p {
+  font-size: small;
+  color: gray;
+}
+
+.postImage > img {
+  width: 100%;
+}
+.postOptions {
+  padding-top: 10px;
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: medium;
+  color: gray;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.postOption {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
+  flex: 1;
+  font-size: 20px;
+}
+.postOption > p {
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.postOption:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
 }
