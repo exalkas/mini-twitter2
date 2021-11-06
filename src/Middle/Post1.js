@@ -1,54 +1,26 @@
-import React , {useState, useEffect}from 'react'
+import React from 'react'
 //import './Post.css'
-
-
+import {CgProfile} from 'react-icons/cg'
 import {FaRegComment} from 'react-icons/fa'
 import {AiOutlineRetweet} from 'react-icons/ai'
 import {FcLike} from 'react-icons/fc'
 import {FiShare} from 'react-icons/fi'
-import axios from 'axios';
 
-function Post(props) {
-    console.log("pops:", props);
-    
-    
-    const Userfoto = ((id)=> {
-
-        const [user, setUser] = useState();
- 
-    useEffect(async () => {
-      const result = await axios(`https://elak-mini-twitter.herokuapp.com/users/${id}`
-      );
-   
-      setUser(result.data);
-    }, []);
-
-
-      console.log(user)
-      
-
-      if (!user) return ("sorry")
-
-
-        return(<img src={`${props.item.image_url}`} alt=''/>)
-
-    })
-    
+function Post() {
     return (
         <div className='post'>
            <div className='postTop'>
-               
+               <CgProfile />
                <div className='postTopInfo'>
-               <img src={`${props.item.image_url}`} alt=''/>
-                   <h3>{props.item.username}</h3>
-                    <p>{props.item.timestamp}</p>
+                   <h3>username</h3>
+                    <p>timestamp</p>
                </div>
                </div>
                <div className='postBottom'>
-                   <p>{props.item.message}</p>
+                   <p>Hello Good Morning!!</p>
                </div>
                <div className='postImage'>
-                  
+                  <img src='https://images2.alphacoders.com/910/thumb-1920-910289.jpg' alt=''/>
                </div>
                <div className='postOptions'>
                <div className='postOption'>

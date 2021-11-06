@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Post from '../Middle/Post';
 
-function MessagesRoute() {
+
+  
+
+export default function MessagesRoute() {
+
+    const [data, setData] = useState();
+ 
+    useEffect(async () => {
+      const result = await axios(
+        'https://elak-mini-twitter.herokuapp.com/messages/',
+      );
+   
+      setData(result.data);
+    }, []);
+
+
+      console.log(data)
+      
+
+      if (!data) return ("sorry")
     return (
-        <div>
-            Meesages Here
-        </div>
+        data.map((ele) => <Post item = {ele}/>)
     )
 }
 
-export default MessagesRoute
