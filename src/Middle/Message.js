@@ -27,7 +27,7 @@ function MessageSender() {
                       <GrSchedule/>  
                       <button type='submit'>Tweet</button>
               </div>  
-              <Post /> 
+             
         </div>
     )
 }

@@ -6,7 +6,7 @@ import {AiOutlineRetweet} from 'react-icons/ai'
 import {FcLike} from 'react-icons/fc'
 import {FiShare} from 'react-icons/fi'
 
-function Post() {
+function Post1() {
     return (
         <div className='post'>
            <div className='postTop'>
@@ -41,7 +41,7 @@ function Post() {
     )
 }
 
-export default Post
+export default Post1
 
 
 // please use state for image,comment , text etc. I have just given a default value for the same

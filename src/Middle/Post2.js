@@ -9,35 +9,21 @@ import {FcLike} from 'react-icons/fc'
 import {FiShare} from 'react-icons/fi'
 import axios from 'axios';
 
-function Post(props) {
+function Post2(props) {
+    console.log(props)
    
     const [user, setUser] = useState();
     
     
-    
-    
-    const Userfoto = ((id)=> {
-
-        useEffect(async () => {
+    useEffect(async () => {
       const result = await axios(`https://elak-mini-twitter.herokuapp.com/users/${id}`
       );
    
       setUser(result.data);
     }, []);
     
- 
     
 
-
-      console.log("USER:", user)
-      
-
-      if (!user) return ("sorry")
-
-
-        return(<img src={user?.profile_picture} alt=''/>)
-
-    })
     
     const {id} = useParams() ; 
     return (
@@ -46,18 +32,18 @@ function Post(props) {
                
                <div className='postTopInfo'>
 
-               {/* <img src={`${user?.image_url}`} alt=''/> */}
-               {Userfoto(props.item.user_id)}
-                   <h3>{props.item.username}</h3>
-                    <p>{props.item.timestamp}</p>
+               <img src={user?.image_url} alt=''/>
+               {/* {Userfoto(props.item.user_id)} */}
+                   <h3>{props.username}</h3>
+                    <p>{props.timestamp}</p>
                </div>
                </div>
                <div className='postBottom'>
-                   <p>{props.item.message}</p>
+                   <p>{props.message}</p>
                </div>
                <div className='postImage'>
                   
-               <img src={`${props.item.image_url}`} alt=''/>
+               <img src={`${props.image_url}`} alt=''/>
                </div>
                <div className='postOptions'>
                <div className='postOption'>
@@ -65,7 +51,7 @@ function Post(props) {
                    </div>
                    <div className='postOption'>
                     <AiOutlineRetweet />
-                    <Link to={`Notifications/${props.item.message_id}`} ><p>Show this Message</p></Link>
+                    <p>Comment</p>
                    </div>               
                    <div className='postOption'>
                     <FcLike />
@@ -78,7 +64,7 @@ function Post(props) {
     )
 }
 // <Route path='/:id/userdetail/usercomments' exact component={CommentsDetail}  />
-export default Post
+export default Post2
 
 
 // please use state for image,comment , text etc. I have just given a default value for the same
