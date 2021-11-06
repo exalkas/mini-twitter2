@@ -19,7 +19,7 @@ export default function MessagesRoute() {
 
 
       console.log(data)
-      console.log(data.user)
+      
 
       if (!data) return ("sorry")
     return (
