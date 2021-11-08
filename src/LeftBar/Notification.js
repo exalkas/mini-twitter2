@@ -10,7 +10,6 @@ function Notification() {
     console.log("PARAMS",id);
     const [message, setMessage] = useState(); 
     
-    console.log(`https://elak-mini-twitter.herokuapp.com/messages/${id}`)
  
     useEffect(async () => {
         console.log(id);
@@ -26,7 +25,14 @@ function Notification() {
     }, []);
 
 
-      
+
+
+     function Loading(){
+         while(!message){
+             return "loading"
+         }
+         return  <Post2 item1={message} /> 
+     } 
       
 
  
@@ -36,7 +42,7 @@ function Notification() {
     return (
 
         <div>
-            <Post2 item1={message} />
+          {Loading()}
         </div>
     )
 }

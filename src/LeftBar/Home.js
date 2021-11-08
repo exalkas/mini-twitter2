@@ -1,11 +1,13 @@
 import React from 'react';
 import MessageSender from '../Middle/Message';
+import MessagesRoute from './MessageRoute';
 
 function Home() {
     return (
-        <div>
+        <>
            <MessageSender />
-        </div>
+           <MessagesRoute />
+        </>
     )
 }
 
